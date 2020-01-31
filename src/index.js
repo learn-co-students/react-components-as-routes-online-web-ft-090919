@@ -40,9 +40,13 @@ const Login = () => { //Login route to router
   );
 };
 
-ReactDOM.render((
+ReactDOM.render(( //Added rendered routes home, About, Login
   <Router>
-    <Route path="/" component={Home} />
+    <dive>
+      <Route path="/" component={Home} />
+      <Route exact path="/about" component={About} />
+      <Route exact path="/login" component={Login} />
+    </div>
   </Router>),
   document.getElementById('root')
 );
