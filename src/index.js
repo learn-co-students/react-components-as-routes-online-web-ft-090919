@@ -1,48 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Home from './Home'
+import About from './About'
+import Login from './Login'
+import Navbar from './Navbar'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 //imported react-router functions
 
-const Home = () => {
-  return (
-    <div>
-      <h1>Home!</h1>
-    </div>
-  );
-};
 
 
-const About = () => { //About route to router
-  return (
-    <div>
-    <h1>This is my about component!</h1>
-    </div>
-  );
-};
-
-
-
-const Login = () => { //Login route to router
-  return (
-    <div>
-      <form>
-        <div>
-          <input type="text" name="username" placeholder="Username" />
-          <label htmlFor="username">Username</label>
-        </div>
-        <div>
-          <input type="password" name="password" placeholder=Password />
-          <label htmlFor=password>Password</label>
-        </div>
-        <input type="submit" value="Login" />
-      </form>
-    </div>
-  );
-};
 
 ReactDOM.render(( //Added rendered routes home, About, Login
   <Router>
-    <dive>
+    <div>
       <Route path="/" component={Home} />
       <Route exact path="/about" component={About} />
       <Route exact path="/login" component={Login} />
